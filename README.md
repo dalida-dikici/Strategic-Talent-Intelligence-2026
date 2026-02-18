@@ -4,6 +4,8 @@
 In this laboratory, I transformed raw HR data from Kaggle into the 'Elixir' of strategic talent insights. 
 Using my proprietary TVI (Talent Value Index) algorithm, I've architected a decision-making dashboard for the 2026 talent landscape.
 
+![Dashboard Overview](Visuals/pic-1.png)
+
 🔍 The 7 Strategic Pillars (FAQ)
 1. The Art of Talent Scoring: What makes a "Champion" candidate?
 Designing a high-quality employee experience is a challenge for HR. My answer was the TVI Score. We didn't just look at experience; we calculated it using an weighted algorithm:
@@ -48,3 +50,4 @@ Currently alchemying data at Multigroup (Google Projects) and FirmaCV(HR-Tech), 
 🐾 Living in Kuşadası with my companion Mocha.
 
 [LinkedIn Profile](https://www.linkedin.com/in/dalida-dikici/) | [Let's build a story together!](mailto:dekbenli@gmail.com)
+
