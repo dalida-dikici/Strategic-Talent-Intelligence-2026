@@ -1,0 +1,13 @@
+TVI_Skoru = 
+-- 1. Deneyimi 0-1 arasına çekiyoruz (Maksimum 20 yıl kabul ettik)
+VAR NormalizeExp = MAX(0, MIN(1, AVERAGE('aug_train'[experience]) / 20)) 
+
+-- 2. Eğitimi 0-1 arasına çekiyoruz (Maksimum 100 saat kabul ettik)
+VAR NormalizeTraining = MAX(0, MIN(1, AVERAGE('aug_train'[training_hours]) / 100))
+
+-- 3. NİTELİK FİLTRESİ: Eğer ilgili deneyimi yoksa eğitim puanını %50 kırıyoruz
+VAR QualityFilter = IF(SELECTEDVALUE('aug_train'[relevent_experience]) = "Has relevent experience", 1, 0.5)
+
+-- 4. FİNAL HESAPLAMA (Ağırlıklı Ortalama)
+RETURN
+( (NormalizeExp * 0.35) + (NormalizeTraining * QualityFilter * 0.45) + (QualityFilter * 0.20) ) * 100
